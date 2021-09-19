@@ -1,33 +1,32 @@
 # frozen_string_literal: true
 
 require 'dry/transformer/all'
-require 'managing_hotels/importing/transformations/functions'
-
+require 'managing_hotels/importing/patagonia/functions'
 module ManagingHotels
   module Importing
-    module Transformations
-      class Acme < Dry::Transformer::Pipe
+    module Patagonia
+      class Transformation < Dry::Transformer::Pipe
         import Dry::Transformer::ArrayTransformations
         import Dry::Transformer::HashTransformations
 
         define! do
           map_array do
-            map_keys(Functions[:underscore])
             deep_symbolize_keys
             rename_keys(
               id: :external_id,
-              latitude: :lat,
-              longitude: :lng,
-              postal_code: :zip,
-              facilities: :amenities
+              destination: :destination_id,
+              info: :description
             )
+            map_value(:address, Functions[:extract_zip])
+            unwrap(:address, [:address, :zip])
             map_values(Functions[:strip])
-            nest :location, [:lat, :lng, :zip, :address, :city, :country]
-            # binding.irb
+            nest :location, [:lat, :lng, :zip, :address]
             map_value(:amenities) do
+              map_array(Functions[:parameterize])
               map_array(Functions[:underscore])
               map_array(Functions[:strip])
             end
+            map_value(:images, Functions[:flatten])
           end
         end
 

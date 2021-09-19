@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'managing_hotels/importing/transformations/patagonia'
+require 'managing_hotels/importing/patagonia/transformation'
 
-RSpec.describe ManagingHotels::Importing::Transformations::Patagonia do
+RSpec.describe ManagingHotels::Importing::Patagonia::Transformation do
   subject(:transformation) { described_class.new }
 
   let(:input) do

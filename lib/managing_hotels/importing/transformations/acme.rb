@@ -13,7 +13,7 @@ module ManagingHotels
         define! do
           map_array do
             map_keys(Functions[:underscore])
-            symbolize_keys
+            deep_symbolize_keys
             rename_keys(
               id: :external_id,
               latitude: :lat,

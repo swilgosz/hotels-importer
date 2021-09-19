@@ -67,6 +67,8 @@ GEM
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     diff-lcs (1.4.4)
+    dry-inflector (0.2.1)
+    dry-transformer (0.1.1)
     erubi (1.10.0)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
@@ -169,6 +171,8 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
+  dry-inflector
+  dry-transformer
   factory_bot
   listen (~> 3.3)
   puma (~> 5.0)

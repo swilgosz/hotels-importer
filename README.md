@@ -37,6 +37,7 @@ ManagingHotels::Importing::Import.call
 ## Notes
 
 - Unified all resources to an easy to work-with data structure
+- Added Type check for input schema for Acme and Patagonia - I could not add it to Paperfiles yet, but it'd work the same. This is a validation checks so we are 100% sure that the input data format is as expected so we can safely work with.
 - Descriptions are merged in the way the longest one is taken, and the rest rejected.
 - Values are stripped from unnecessary whitespaces
 - amenities - are transformed into a snake_case string format, just to reduce the number of duplicates and improve clarity.
@@ -54,6 +55,11 @@ ManagingHotels::Importing::Import.call
 - Caching Responses.
 - Model optimized for reading.
 - Importing data is done asynchronously and saved to DB to avoid unnecessary calculations while reading.
+
+## Best practices
+
+- Write-part of the application is separated from the read-part. This allows for easy changes without affecting other part and allows to optimize DB records for reads.
+- Each transformations are kept as standalone, encapsulated classes, which allow them for easy test coverage, easy removal or adding new providers.
 
 ## Todo
 

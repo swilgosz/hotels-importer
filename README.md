@@ -40,6 +40,13 @@ ManagingHotels::Importing::Import.call
 - Descriptions are merged in the way the longest one is taken, and the rest rejected.
 - Values are stripped from unnecessary whitespaces
 - amenities - are transformed into a snake_case string format, just to reduce the number of duplicates and improve clarity.
+- Specs - due to the limited time I've focused on covering as much of code with as little examples as possible. Therefore I've written integration tests (requests tests) and Transformation tests, for the moment assuming API returns proper data.
+
+**Response format changes**
+
+- country - I decided to return 2-letter country identifier from Acme for easier parsing by frontend clients.
+- amenities and images - I've decided to ungroup those two due to the fact it feels natural there can be more groups in other records or providers, or the groups can be named differently.
+- Both changes are trivial to change if needed.
 
 ## Performance optimizations applied
 
@@ -51,5 +58,6 @@ ManagingHotels::Importing::Import.call
 ## Todo
 
 - sidekiq integration with job scheduled as a repeatitive rake task.
-- deployment configuration
+- deployment to heroku
+- Tests for the importer itself - merging data, saving records.
 - dockerization for easier running

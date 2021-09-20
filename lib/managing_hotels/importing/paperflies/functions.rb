@@ -4,7 +4,7 @@ require 'dry-inflector'
 
 module ManagingHotels
   module Importing
-    module Paperfiles
+    module Paperflies
       class Inflector < Dry::Inflector
         def strip(str)
           str.respond_to?(:strip) ? str.strip : str

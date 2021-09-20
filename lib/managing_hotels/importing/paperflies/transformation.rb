@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 require 'dry/transformer/all'
-require 'managing_hotels/importing/paperfiles/functions'
+require 'managing_hotels/importing/paperflies/functions'
 
 module ManagingHotels
   module Importing
-    module Paperfiles
+    module Paperflies
       class Transformation < Dry::Transformer::Pipe
         import Dry::Transformer::ArrayTransformations
         import Dry::Transformer::HashTransformations

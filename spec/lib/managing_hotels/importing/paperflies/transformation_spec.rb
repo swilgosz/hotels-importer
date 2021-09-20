@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'managing_hotels/importing/paperfiles/transformation'
+require 'managing_hotels/importing/paperflies/transformation'
 
-RSpec.describe ManagingHotels::Importing::Paperfiles::Transformation do
+RSpec.describe ManagingHotels::Importing::Paperflies::Transformation do
   subject(:transformation) { described_class.new }
 
   let(:input) do

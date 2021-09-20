@@ -24,6 +24,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'dry-inflector', require: false
 gem 'dry-transformer', require: false
+gem 'dry-schema', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 

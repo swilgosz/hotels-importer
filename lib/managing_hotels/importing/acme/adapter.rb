@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 require 'managing_hotels/importing/connection'
-require 'managing_hotels/importing/paperflies/schema'
-require 'managing_hotels/importing/paperflies/transformation'
+require 'managing_hotels/importing/acme/schema'
+require 'managing_hotels/importing/acme/transformation'
 
 module ManagingHotels
   module Importing
-    module Paperflies
+    module Acme
       class Adapter
-        URL = 'https://5f2be0b4ffc88500167b85a0.mockapi.io/suppliers/paperflies'
+        URL = 'https://5f2be0b4ffc88500167b85a0.mockapi.io/suppliers/acme'
 
         def call
           input = connection.call(URL)

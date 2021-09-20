@@ -11,8 +11,8 @@ module ManagingHotels
         end
 
         def extract_zip(str)
-          elements = str.split(',')
-          zip = elements.pop.strip
+          elements = (str || '').split(',')
+          zip = elements.pop&.strip || ''
           address = elements.join(',')
           { address: address, zip: zip }
         end

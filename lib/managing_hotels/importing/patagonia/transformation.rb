@@ -2,6 +2,7 @@
 
 require 'dry/transformer/all'
 require 'managing_hotels/importing/patagonia/functions'
+require 'managing_hotels/importing/patagonia/schema'
 module ManagingHotels
   module Importing
     module Patagonia

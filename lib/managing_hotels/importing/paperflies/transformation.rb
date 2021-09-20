@@ -33,7 +33,7 @@ module ManagingHotels
             map_value(:images, Functions[:flatten])
             map_value(:images) do
               map_array do
-                rename_keys(link: :url, caption: :description)
+                rename_keys(caption: :description)
               end
             end
           end

@@ -74,19 +74,19 @@ RSpec.describe ManagingHotels::Importing::Patagonia::Transformation do
           ],
           images: [
             {
-              url: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/2.jpg",
+              link: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/2.jpg",
               description: "Double room"
             },
             {
-              url: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/4.jpg",
+              link: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/4.jpg",
               description: "Bathroom"
             },
             {
-              url: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/0.jpg",
+              link: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/0.jpg",
               description: "RWS"
             },
             {
-              url: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/6.jpg",
+              link: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/6.jpg",
               description: "Sentosa Gateway"
             }
           ]

@@ -28,6 +28,11 @@ module ManagingHotels
               map_array(Functions[:strip])
             end
             map_value(:images, Functions[:flatten])
+            map_value(:images) do
+              map_array do
+                rename_keys(url: :link)
+              end
+            end
           end
         end
 

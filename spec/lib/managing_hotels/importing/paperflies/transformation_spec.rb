@@ -87,15 +87,15 @@ RSpec.describe ManagingHotels::Importing::Paperflies::Transformation do
           ],
           images: [
             {
-              url: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/2.jpg",
+              link: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/2.jpg",
               description: "Double room"
             },
             {
-              url: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/3.jpg",
+              link: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/3.jpg",
               description: "Double room"
             },
             {
-              url: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/1.jpg",
+              link: "https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/1.jpg",
               description: "Front"
             }
           ],

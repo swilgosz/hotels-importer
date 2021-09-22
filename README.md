@@ -1,6 +1,6 @@
 # README
 
-This is Hotels importing application.
+This is Hotels importing application. Deployed to heroku at: https://hotels-importer.herokuapp.com/api/v1/hotels
 
 ## Development
 
@@ -17,15 +17,12 @@ To setup the environment run:
 
 There are several improvmenets yet to be applied to say this application is ready.
 
-
 ## Usage
 
-Data import is done manually atm. Will be moved to an automatic sidekiq job next.
+When you run application locally, just run the import to download all the necessary data.
 
 ```
-rails c
-require 'managing_hotels/importing/import'
-ManagingHotels::Importing::Import.call
+rake hotels:import
 ```
 
 ### Listing and filtering hotels
@@ -63,7 +60,4 @@ ManagingHotels::Importing::Import.call
 
 ## Todo
 
-- sidekiq integration with job scheduled as a repeatitive rake task.
-- deployment to heroku
 - Tests for the importer itself - merging data, saving records.
-- dockerization for easier running
